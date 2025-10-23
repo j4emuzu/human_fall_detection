@@ -147,7 +147,7 @@ while cap.isOpened():
         vertical_speed = abs(cy - start_frame_center_y)/dt
 
         # --- Simple fall labeling based on tilt/aspect ratio ---
-        if tilt_angle < 140 and aspect_ratio > 1.4:
+        if tilt_angle < 140 and aspect_ratio > 1.4 and vertical_speed > 0.045:
             label = "fall"
             color = (0, 0, 255)
             text = "Fall Detected"
